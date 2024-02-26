@@ -1,0 +1,58 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicketApprentice.CsvFileComponents.GridPage"
+             xmlns:local="clr-namespace:TicketApprentice.CsvFileComponents">
+    
+    <AbsoluteLayout VerticalOptions="FillAndExpand">
+        <CollectionView x:Name="DataGrid" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" ItemsSource="{Binding GridData}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="0" ColumnSpacing="1" RowSpacing="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <!-- Adjusting row height to create more rectangular cells -->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        
+                        <!-- Adjustments for Frame to remove space and focus on width -->
+                        <!-- Entry with Frame for Data1 -->
+                        <Frame Grid.Column="0" BorderColor="Black" CornerRadius="0" Padding="0" HasShadow="False" Margin="0,0,0,0">
+                            <Entry Text="{Binding Data1, Mode=TwoWay}" Margin="0,-6,0,0"/>
+                        </Frame>
+                        
+                        <!-- Repeat Frame adjustment for other data columns.. -->
+                        <Frame Grid.Column="1" BorderColor="Black" CornerRadius="0" Padding="0" HasShadow="False" Margin="0,0,0,0">
+                            <Entry Text="{Binding Data2, Mode=TwoWay}" Margin="0,-6,0,0"/>
+                        </Frame>
+                        <Frame Grid.Column="2" BorderColor="Black" CornerRadius="0" Padding="0" HasShadow="False" Margin="0,0,0,0">
+                            <Entry Text="{Binding Data3, Mode=TwoWay}" Margin="0,-6,0,0"/>
+                        </Frame>
+                        <Frame Grid.Column="3" BorderColor="Black" CornerRadius="0" Padding="0" HasShadow="False" Margin="0,0,0,0">
+                            <Entry Text="{Binding Data4, Mode=TwoWay}" Margin="0,-6,0,0"/>
+                        </Frame>
+                        <Frame Grid.Column="4" BorderColor="Black" CornerRadius="0" Padding="0" HasShadow="False" Margin="0,0,0,0">
+                            <Entry Text="{Binding Data5, Mode=TwoWay}" Margin="0,-6,0,0"/>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Grid AbsoluteLayout.LayoutBounds="0,1,1,AutoSize" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        
+            <Button Text="Clear Data" Grid.Column="0" Clicked="OnClearDataClicked"/>
+            <Button Text="Export to CSV" Grid.Column="1" Clicked="OnShareAsCsvClicked"/>
+        </Grid>
+    </AbsoluteLayout>
+</ContentPage>
