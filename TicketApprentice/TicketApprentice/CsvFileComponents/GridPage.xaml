@@ -24,22 +24,24 @@
                         <!-- Adjustments for Frame to remove space and focus on width -->
                         <!-- Entry with Frame for Data1 -->
                         <Frame Grid.Column="0" BorderColor="Black" CornerRadius="0" Padding="0" HasShadow="False" Margin="0,0,0,0">
-                            <Entry Text="{Binding Data1, Mode=TwoWay}" Margin="0,-6,0,0"/>
+                            <Entry Text="{Binding Data1, Mode=TwoWay}" Margin="0,-6,0,0" TextColor="Black"/>
                         </Frame>
-                        
-                        <!-- Repeat Frame adjustment for other data columns.. -->
+
                         <Frame Grid.Column="1" BorderColor="Black" CornerRadius="0" Padding="0" HasShadow="False" Margin="0,0,0,0">
-                            <Entry Text="{Binding Data2, Mode=TwoWay}" Margin="0,-6,0,0"/>
+                            <Entry Text="{Binding Data2, Mode=TwoWay}" Margin="0,-6,0,0" TextColor="Black"/>
                         </Frame>
+
                         <Frame Grid.Column="2" BorderColor="Black" CornerRadius="0" Padding="0" HasShadow="False" Margin="0,0,0,0">
-                            <Entry Text="{Binding Data3, Mode=TwoWay}" Margin="0,-6,0,0"/>
+                            <Entry Text="{Binding Data3, Mode=TwoWay}" Margin="0,-6,0,0" TextColor="Black"/>
                         </Frame>
+
                         <Frame Grid.Column="3" BorderColor="Black" CornerRadius="0" Padding="0" HasShadow="False" Margin="0,0,0,0">
-                            <Entry Text="{Binding Data4, Mode=TwoWay}" Margin="0,-6,0,0"/>
+                            <Entry Text="{Binding Data4, Mode=TwoWay}" Margin="0,-6,0,0" TextColor="Black"/>
                         </Frame>
+
                         <Frame Grid.Column="4" BorderColor="Black" CornerRadius="0" Padding="0" HasShadow="False" Margin="0,0,0,0">
-                            <Entry Text="{Binding Data5, Mode=TwoWay}" Margin="0,-6,0,0"/>
-                        </Frame>
+                            <Entry Text="{Binding Data5, Mode=TwoWay}" Margin="0,-6,0,0" TextColor="Black"/>
+                        </Frame>   
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
